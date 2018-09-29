@@ -1,0 +1,3 @@
+[submodule "urbana-trees-analysis"]
+	path = urbana-trees-analysis
+	url = https://github.com/cudsug/urbana-trees-analysis.git
