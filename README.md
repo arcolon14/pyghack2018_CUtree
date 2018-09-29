@@ -1,7 +1,7 @@
 # pyghack2018_CUtree
 Pyghack 2018 project, CU tree/flooding data
 
-We decided to work on the Urbana Trees and Green Infrastructure data project.
+We decided to work on the [Urbana Trees and Green Infrastructure data project](https://github.com/cudsug/urbana-trees-analysis/).
 
 > # Urbana Trees and Green Infrastructure
 > Overview:
