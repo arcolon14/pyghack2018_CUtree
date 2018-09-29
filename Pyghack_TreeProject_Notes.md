@@ -23,3 +23,12 @@ city properties to get addresses/location
   1. Trees
   2. Census
   3. Flood/Storm
+
+#Census Data Ideas
+Census variables we want to work with:
+-Median income
+-Property value
+-Ethnicity
+We want to combine these with:
+-Tree density
+-Flooding (complaints?)
