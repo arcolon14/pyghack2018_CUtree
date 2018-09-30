@@ -37,8 +37,22 @@ def get_lon_from_X(x_val):
     return lon
 
 
+# Take cleaned tree inventory file and add Lat and Lon data
+old_tree = '/mnt/c/Users/AngelRC/Desktop/other_datasets/tree/tree_inventory.tsv'
+new_tree = '/mnt/c/Users/AngelRC/Desktop/pyghack2018/pyghack2018_CUtree/cleaned_tree_data/tree_inventory.tsv'
+new_file = open(new_tree, 'w')
+for i, line in enumerate(open(old_tree)):
+    fields = line.strip('\n').split('\t')
+    # Modify header
+    if i == 0:
+        fields.append('Lat')
+        fields.append('Lon')
+    else:
+        # Calculate new Lat and Lon values
+        fields.append(str(get_lat_from_Y(float(fields[59]))))
+        fields.append(str(get_lon_from_X(float(fields[58]))))
+    # format and write to file
+    new_file.write('{}\n'.format('\t'.join(fields)))
 
-X = 1016282.71
-Y = 1255615.13
 
-print( '{} - {}'.format( get_lat_from_Y(Y), get_lon_from_X(X) ) )
+new_file.close()
