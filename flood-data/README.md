@@ -7,3 +7,6 @@ The result can be found in flood-formatted-address-batch.csv, which is conforman
 ```
 curl --form addressFile=@flood-formatted-address-batch.csv --form benchmark=Public_AR_Current https://geocoding.geo.census.gov/geocoder/locations/addressbatch --output geocoderesult.csv
 ```
+
+
+TURNS OUT Flood locations are completely invalid because tax payer addresses have no guarantee of being the actual parcel location and it's much harder to get the parcel location with the tools at hand.
