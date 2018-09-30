@@ -25,7 +25,9 @@ t10 <- subset(tracts, tracts$tractAffGeoId == geoID[10])
 t11 <- subset(tracts, tracts$tractAffGeoId == geoID[11])
 t12 <- subset(tracts, tracts$tractAffGeoId == geoID[12])
 t13 <- subset(tracts, tracts$tractAffGeoId == geoID[13])
- 
+
+
+tiff("C:/Users/AngelRC/Desktop/pyghack2018/pyghack2018_CUtree/UrbanaTreesTracts.tff", 10, 10, units='in', res=350)
 # Get map data from Google maps
 map <- get_googlemap(center = c(lon=-88.208770, lat=40.110711), zoom=13, scale = 2, key=myKey)
 ggmap(map, 
@@ -53,3 +55,5 @@ ggmap(map,
   geom_polygon(data=t11, aes(long, lat), alpha=0.2, fill=cols[11]) +
   geom_polygon(data=t12, aes(long, lat), alpha=0.2, fill=cols[12]) +
   geom_polygon(data=t13, aes(long, lat), alpha=0.2, fill=cols[13])
+
+.=dev.off()
